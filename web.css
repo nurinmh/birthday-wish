@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Birthday wish</title>
+    <link rel="stylesheet" href="css/happybd.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+
+    <div class="giftcontainer">
+        <div class="gift">
+            <audio id="mySong">
+                <source src="audio/happy-birthday-155461.mp3">
+            </audio>
+        
+            <input type="checkbox" id="click">
+            <label for="click" class="click"></label>
+            <div class="wishes">Happy Birthday</div>
+        </div>
+    </div>
+
+   <div class="message">
+        <p>Wishing you a fantastic a birthday!</p>
+        <p>May this year bring more laughter,</p>
+        <p>growth, and cherished memories to you.</p>
+        <p>Enjoy your special day to the fullest!</p>
+        <p>Happy Birthday!</p>
+        <p style="color: blue;">(psstt try click the top of the gift)</p>
+    </div>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+
+        document.getElementById('click').onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+            } else{
+                mySong.pause();
+            }
+        }
+
+        function Show() {
+            var name = document.getElementById('name').value;
+
+            if (document.getElementById('name').value == "") {
+                alert('Please Fill in Your Name');
+            } else {
+                document.getElementById('addname').innerHTML = name;
+
+                document.getElementById('m1').style.display = "none";
+                document.getElementById('c1').style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
